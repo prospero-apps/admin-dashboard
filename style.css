@@ -1,3 +1,7 @@
+:root {
+    --shadow: 2px 2px 5px lightgray;
+}
+
 body {
     margin: 0;
 }
@@ -130,13 +134,16 @@ body {
 #project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 20px;
 }
 
 .project {
+    display: flex;
+    flex-direction: column;
     border-left: 8px solid orange;
     border-radius: 10px;
-    box-shadow: 0 2px 2px gray;
+    box-shadow: var(--shadow);
+    justify-content: space-between;
 }
 
 .btns {
@@ -149,7 +156,7 @@ body {
 #other-containers {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    gap: 25px;
 }
 
 #announcements-container,
@@ -158,10 +165,17 @@ body {
     flex-direction: column;
 }
 
+#announcements-container *,
+#trending-container * {
+    margin: 0;
+}
+
 #announcements,
 #trending {
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
 }
 
 .announcement {
@@ -172,7 +186,8 @@ body {
 .trends {
     display: grid;
     grid-template-columns: 50px 1fr;
-    grid-template-rows: 1fr 1fr;    
+    grid-template-rows: 1fr 1fr; 
+    align-items: center;
 }
 
 .trends .user-icon {
