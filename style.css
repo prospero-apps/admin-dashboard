@@ -1,8 +1,5 @@
 body {
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
 }
 
 #container *{
@@ -12,8 +9,8 @@ body {
 #container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 200px 1fr;
 }
 
 /* SIDEBAR */
@@ -66,15 +63,14 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 2 / 4;
-    height: 140px;
     box-shadow: 0 5px 4px lightgray;
 }
 
 #user,
 #buttons {
     display: flex;
-    gap: 20px;
-    justify-content: right;
+    gap: 10px;
+    justify-content: right;    
 }
 
 .user-name {
@@ -96,7 +92,7 @@ body {
 #buttons button {
     background-color: blue;
     border: 1px solid black;
-    width: 7rem;
+    width: 6rem;
     height: 2.5rem;
     border-radius: 30px;
     color: white;
@@ -106,7 +102,7 @@ body {
 
 #buttons button:hover {
     background-color: lightblue;
-    transform: scale(1.1);
+    transform: scale(.9);
 }
 
 #buttons button:active {
@@ -128,13 +124,25 @@ body {
 /* PROJECTS */
 #projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 #project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    background-color: lightblue;
+    gap: 10px;
+}
+
+.project {
+    border-left: 8px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px gray;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 /* OTHER CONTAINERS */
