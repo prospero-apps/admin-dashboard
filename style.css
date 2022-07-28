@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+/* SIDEBAR */
+#sidebar {
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+    grid-row: 1 / 3;
+    background-color: gray;    
+}
+
+/* HEADER */
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2 / 4;
+    background-color: pink;
+}
+
+#user,
+#buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: right;
+}
+
+#welcome {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: green;
+}
+
+#welcome .user-icon {
+    grid-row: 1 / 3;    
+}
+
+/* PROJECTS */
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: lightblue;
+}
+
+/* OTHER CONTAINERS */
+#other-containers {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+#announcements-container,
+#trending-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#announcements,
+#trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+}
+
+.trends {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr 1fr;    
+}
+
+.trends .user-icon {
+    grid-row: 1 / 3;
+}
